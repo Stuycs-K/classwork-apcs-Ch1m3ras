@@ -27,11 +27,11 @@ public class MyArrays{
     System.out.println("Hello World");
     int[] testingArray = {1,2,3,4,5,56};
     System.out.println(arrayToString(testingArray));
-    if(!testingArray == returnCopy(testingArray)){
-      System.out.println("Return Copy functions as it's supposed to.")
+    if(!(testingArray == returnCopy(testingArray))){
+      System.out.println("Return Copy functions as it's supposed to.");
     }
     else{
-      System.out.println("Return Copy does not function as it's supposed to. More testing required. ")
+      System.out.println("Return Copy does not function as it's supposed to. More testing required. ");
     }
   }
 }
