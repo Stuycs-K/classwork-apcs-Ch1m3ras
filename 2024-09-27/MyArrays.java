@@ -27,5 +27,6 @@ public class MyArrays{
     System.out.println("Hello World");
     int[] testingArray = {1,2,3,4,5,56};
     System.out.println(arrayToString(testingArray));
+    System.out.println("Returning a copy of testingArray which returns: " + arrayToString(returnCopy(testingArray)) + "and it is a " + (String)(returnCopy(testingArray) == testingArray) + "copy.");
   }
 }
