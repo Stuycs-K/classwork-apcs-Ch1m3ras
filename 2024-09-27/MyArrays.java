@@ -14,6 +14,15 @@ public class MyArrays{
     return returnedString;
   }
 
+  public static int[] returnCopy(int[] ary){
+    int[] returnedArray = new int[ary.length];
+    for(int i = 0; i < ary.length; i++){
+      returnedArray[i] = ary[i];
+    }
+    return returnedArray;
+  }
+
+
   public static void main(String[] args){
     System.out.println("Hello World");
     int[] testingArray = {1,2,3,4,5,56};
