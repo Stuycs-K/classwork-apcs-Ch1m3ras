@@ -1,5 +1,6 @@
 //1. Write both your names + emails at the top of the document as a comment.\
 // lbenitez60@stuy.edu Leonardo Benitez
+// alexanderc367@nycstudents.net Alexander Chen
 
 //2. Copy your arrToString method from before.
 /**Return a String that represets the array in the format:
