@@ -37,7 +37,10 @@ public class ArrayMethods{
     //this should use arrToString(int[])
     String result = "[";
     for (int i = 0; i < ary.length; i++){
-      arrToString(ary[i]);
+      result = result + arrToString(ary[i]);
+      if(i != ary.length - 1){
+        result = result + ", ";
+      }
     }
     result = result + "]";
     return result;
@@ -58,6 +61,7 @@ public class ArrayMethods{
   }
 
   public static void main(String[] args){
-    
+    int[][] ary = {{1, 2, 3}, {1, 5}, {6}};
+    System.out.println(arrToString(ary));
   }
 }
