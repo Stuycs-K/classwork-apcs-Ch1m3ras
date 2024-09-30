@@ -32,6 +32,10 @@ public static String arrToString(int[] nums){
   */
 public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
+  String result = "["
+  for (int i = 0; i < ary.length; i++){
+    
+  }
   return "";
 }
 
