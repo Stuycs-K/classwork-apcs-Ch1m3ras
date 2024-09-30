@@ -1,4 +1,5 @@
-//1. Write both your names + emails at the top of the document as a comment.
+//1. Write both your names + emails at the top of the document as a comment.\
+// lbenitez60@stuy.edu Leonardo Benitez
 
 //2. Copy your arrToString method from before.
 /**Return a String that represets the array in the format:
@@ -34,7 +35,7 @@ public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
   String result = "["
   for (int i = 0; i < ary.length; i++){
-    
+
   }
   return "";
 }
