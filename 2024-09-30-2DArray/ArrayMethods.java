@@ -73,14 +73,32 @@ public class ArrayMethods{
   }
 
   public static void main(String[] args){
+    System.out.println("\nTest Cases for ArrayToString");
     int[][] ary = {{1, 2, 3}, {1, 5}, {6}};
+    int[][] ary2 = {{1, 2, 3}, {1, 5, 5}, {6, 6, 6}};
+    int[][] ary3 = {};
+    int[][] ary4 = {{}, {1, 2, 3, 4}, {0}};
     System.out.println(arrToString(ary));
+    System.out.println(arrToString(ary2));
+    System.out.println(arrToString(ary3));
+    System.out.println(arrToString(ary4));
 
+    System.out.println("\nTest Cases for 2D Sum");
     System.out.println(arr2DSum(ary));
+    System.out.println(arr2DSum(ary2));
+    System.out.println(arr2DSum(ary3));
+    System.out.println(arr2DSum(ary4));
 
+    System.out.println("\nTest Cases for swapRC");
     int[][] rectArray = {{0, 1, 2, 3}, {2, 3, 4, 5}, {5, 6, 7, 8}};
     int[][] rectArray2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int[][] rectArray3 = {{1}, {2}, {3}, {4}, {5}, {6}};
+    int[][] rectArray4 = {{1, 2, 3, 4, 5, 6, 7, 8, 9}};
     System.out.println(arrToString(swapRC(rectArray)));
     System.out.println(arrToString(swapRC(rectArray2)));
+    System.out.println(arrToString(swapRC(rectArray3)));
+    System.out.println(arrToString(swapRC(rectArray4)));
+
+    System.out.println("");
   }
 }
