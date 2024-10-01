@@ -63,7 +63,13 @@ public class ArrayMethods{
     * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
     */
   public static int[][] swapRC(int[][]nums){
-    return new int[1][1];
+    int[][] returnedArray = new int[nums[0].length][nums.length];
+    for(int i2 = 0; i2 < nums[0].length; i2++){
+      for(int i = 0; i < nums.length; i++){
+        returnedArray[i2][i] = nums[i][i2];
+      }
+    }
+    return returnedArray;
   }
 
   public static void main(String[] args){
@@ -71,5 +77,8 @@ public class ArrayMethods{
     System.out.println(arrToString(ary));
 
     System.out.println(arr2DSum(ary));
+
+    int[][] rectArray = {{0, 1, 2, 3}, {2, 3, 4, 5}, {5, 6, 7, 8}};
+    System.out.println(arrToString(swapRC(rectArray)));
   }
 }
