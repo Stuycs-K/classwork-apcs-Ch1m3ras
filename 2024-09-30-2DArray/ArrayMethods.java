@@ -79,6 +79,8 @@ public class ArrayMethods{
     System.out.println(arr2DSum(ary));
 
     int[][] rectArray = {{0, 1, 2, 3}, {2, 3, 4, 5}, {5, 6, 7, 8}};
+    int[][] rectArray2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     System.out.println(arrToString(swapRC(rectArray)));
+    System.out.println(arrToString(swapRC(rectArray2)));
   }
 }
