@@ -91,6 +91,14 @@ public class ArrayMethods{
       }
     }
 
+    //4. Make a copy of the given 2d array.
+    //When testing : make sure that changing the original does NOT change the copy.
+    //DO NOT use any built in methods that "copy" an array.
+    //You SHOULD write a helper method for this.
+    //If you don't see a good way to do that, you should stop and look at prior methods.
+    public static int[][] copy(int[][] nums){
+      return null;//placeholder so it compiles
+    }
 
   public static void main(String[] args){
     System.out.println("\nTest Cases for ArrayToString");
@@ -125,6 +133,10 @@ public class ArrayMethods{
     System.out.println("Original Array 1: " + arrToString(negArray1));
     replaceNegative(negArray1);
     System.out.println("New Array 1:" + arrToString(negArray1));
+    int[][] negArray2 = {{-1, 5, 6}, {-1, -2, 5}, {-5, 6, -1}};
+    System.out.println("Original Array 2: " + arrToString(negArray2));
+    replaceNegative(negArray2);
+    System.out.println("New Array 2:" + arrToString(negArray2));
 
 
     System.out.println("");
