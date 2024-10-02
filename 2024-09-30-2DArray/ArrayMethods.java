@@ -72,6 +72,26 @@ public class ArrayMethods{
     return returnedArray;
   }
 
+
+  //3. Modify a given 2D array of integer as follows:
+  //Replace all the negative values:
+  //-When the row number is the same as the column number replace
+  //that negative with the value 1
+  //-All other negatives replace with 0
+  public static void replaceNegative(int[][] vals){
+      for (int i = 0; i < vals.length; i ++){
+        for (int x = 0; x < vals[i].length; x ++){
+          if (vals[i][x] < 0){
+            if (i == x)
+              vals[i][x] = 1;
+            else
+              vals[i][x] = 0;
+          }
+        }
+      }
+    }
+
+
   public static void main(String[] args){
     System.out.println("\nTest Cases for ArrayToString");
     int[][] ary = {{1, 2, 3}, {1, 5}, {6}};
@@ -98,6 +118,14 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(rectArray2)));
     System.out.println(arrToString(swapRC(rectArray3)));
     System.out.println(arrToString(swapRC(rectArray4)));
+
+
+    System.out.println("\nTestCases for replaceNegative");
+    int[][] negArray1 = {{-1, -2, -3}, {-4, -5}, {-6}};
+    System.out.println("Original Array 1: " + arrToString(negArray1));
+    replaceNegative(negArray1);
+    System.out.println("New Array 1:" + arrToString(negArray1));
+
 
     System.out.println("");
   }
