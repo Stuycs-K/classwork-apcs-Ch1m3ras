@@ -97,7 +97,19 @@ public class ArrayMethods{
     //You SHOULD write a helper method for this.
     //If you don't see a good way to do that, you should stop and look at prior methods.
     public static int[][] copy(int[][] nums){
-      return null;//placeholder so it compiles
+      int[][] returnedArray = new int[nums.length][];
+      for(int i = 0; i < nums.length; i++){
+        returnedArray[i] = copyHelper(nums[i]);
+      }
+      return returnedArray;
+    }
+
+    public static int[] copyHelper(int[] nums){
+      int[] returnedArray = new int[nums.length];
+      for(int i = 0; i < nums.length; i++){
+        returnedArray[i] = nums[i];
+      }
+      return returnedArray;
     }
 
   public static void main(String[] args){
@@ -128,7 +140,7 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(rectArray4)));
 
 
-    System.out.println("\nTestCases for replaceNegative");
+    System.out.println("\nTest cases for replaceNegative");
     int[][] negArray1 = {{-1, -2, -3}, {-4, -5}, {-6}};
     System.out.println("Original Array 1: " + arrToString(negArray1));
     replaceNegative(negArray1);
@@ -137,6 +149,14 @@ public class ArrayMethods{
     System.out.println("Original Array 2: " + arrToString(negArray2));
     replaceNegative(negArray2);
     System.out.println("New Array 2:" + arrToString(negArray2));
+
+    System.out.println("\nTest Cases for copy: ");
+    System.out.println("Original Array: " + arrToString(ary));
+    int[][] copiedArray = copy(ary);
+    System.out.println("Original Array Copied: " + arrToString(copiedArray));
+    ary[2][0] = 0;
+    System.out.println("Changed Array: " + arrToString(ary));
+    System.out.println("Copied Array: " + arrToString(copiedArray));
 
 
     System.out.println("");
