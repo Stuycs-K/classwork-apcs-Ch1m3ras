@@ -151,12 +151,20 @@ public class ArrayMethods{
     System.out.println("New Array 2:" + arrToString(negArray2));
 
     System.out.println("\nTest Cases for copy: ");
+    //First Test Case
     System.out.println("Original Array: " + arrToString(ary));
     int[][] copiedArray = copy(ary);
     System.out.println("Original Array Copied: " + arrToString(copiedArray));
     ary[2][0] = 0;
     System.out.println("Changed Array: " + arrToString(ary));
     System.out.println("Copied Array: " + arrToString(copiedArray));
+    //Second Test Case
+    System.out.println("Original Array 2: " + arrToString(ary2));
+    int[][] copiedArray2 = copy(ary2);
+    System.out.println("Original Array Copied 2: " + arrToString(copiedArray2));
+    ary2[2][0] = 0;
+    System.out.println("Changed Array 2: " + arrToString(ary2));
+    System.out.println("Copied Array 2: " + arrToString(copiedArray2));
 
 
     System.out.println("");
