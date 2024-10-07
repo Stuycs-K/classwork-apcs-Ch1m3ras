@@ -7,7 +7,7 @@ public class ArrayDemo{
     //do not use any other Arrays.method()
     int[][] testArr1 = {{1, 3, 4, 5}, {5, 6, 7}, {2, 3, 4}};
     System.out.println(Arrays.toString(testArr1));
-    System.out.println(arrTostring(testArr1));
+    System.out.println(arrToString(testArr1));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
