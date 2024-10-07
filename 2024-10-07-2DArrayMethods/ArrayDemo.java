@@ -14,13 +14,13 @@ public class ArrayDemo{
   public static String arrToString(int[]ary){
       //Starting bracket as every returned answer requires that.
       String returnedString = "[";
-      for(int i = 0; i < nums.length; i++){
+      for(int i = 0; i < ary.length; i++){
         //Checking to see if it's the last term to make sure there is no hanging comma at the end.
-        if(i == nums.length - 1){
-          returnedString = returnedString + nums[i];
+        if(i == ary.length - 1){
+          returnedString = returnedString + ary[i];
         }
         else{
-          returnedString = returnedString + nums[i] + ", ";
+          returnedString = returnedString + ary[i] + ", ";
         }
       }
       //Same logic as the starting bracket, all code will go through this point, and thus we add the ending bracket
