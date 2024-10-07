@@ -5,7 +5,7 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-    int[][] testArr1 = {{1, 3, 4, 5}, {5, 6, 7}, {2, 3, 4}};
+    int[] testArr1 = {1, 3, 4, 5, 6, 7, 2, 3, 4};
     System.out.println(Arrays.toString(testArr1));
     System.out.println(arrToString(testArr1));
   }
