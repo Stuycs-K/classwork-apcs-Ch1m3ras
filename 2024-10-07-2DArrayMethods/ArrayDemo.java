@@ -45,7 +45,7 @@ public class ArrayDemo{
     System.out.println(countZeros2D(testArr8));
 
     System.out.println("\nTesting for htmlTable()");
-    int[][] testArr9 = {{1,2},{3}}
+    int[][] testArr9 = {{1,2},{3}};
     System.out.println(htmlTable(testArr9));
   }
 
