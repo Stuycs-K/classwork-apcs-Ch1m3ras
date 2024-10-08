@@ -32,6 +32,17 @@ public class ArrayDemo{
     int[][] testArr4 = {{1, 2, 9}, {1, 5, 7}, {5, 4, 3}};
     System.out.println(arrToString(testArr4));
     System.out.println(arrToString(swapRC(testArr4)));
+
+    //Test Cases for the functions unique to this assignment
+    System.out.println("\nTesting for countZeros2D()");
+    int[][] testArr5 = {{1, 2, 3, 4, 5}, {1, 0, 0, 3}, {0, 0, 4}};
+    int[][] testArr6 = {{}, {}};
+    int[][] testArr7 = {{0, 0, 0, 0, 0, 5}, {0, 1, 2, 3, 5}};
+    int[][] testArr8 = new int[5][10];
+    System.out.println(countZeros2D(testArr5));
+    System.out.println(countZeros2D(testArr6));
+    System.out.println(countZeros2D(testArr7));
+    System.out.println(countZeros2D(testArr8));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
