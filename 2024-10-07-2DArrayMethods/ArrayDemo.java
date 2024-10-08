@@ -22,6 +22,16 @@ public class ArrayDemo{
     System.out.println(arrToString(testArr3));
     replaceNegative(testArr3);
     System.out.println(arrToString(testArr3));
+
+    System.out.println("\nTesting for copy()");
+    int[][] copiedArray = copy(testArr3);
+    System.out.println("The address for the original testArr3: " + testArr3);
+    System.out.println("The address for the copied testArr3: " + copiedArray);
+
+    System.out.println("\nTesting for swapRC()");
+    int[][] testArr4 = {{1, 2, 9}, {1, 5, 7}, {5, 4, 3}};
+    System.out.println(arrToString(testArr4));
+    System.out.println(arrToString(swapRC(testArr4)));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
