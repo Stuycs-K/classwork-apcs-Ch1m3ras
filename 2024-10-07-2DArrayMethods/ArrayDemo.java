@@ -170,6 +170,9 @@ public class ArrayDemo{
     String returnedString = "<table>";
     for(int i = 0; i < nums.length; i++){
       returnedString = returnedString + "<tr>";
+      for(int i2 = 0; i2 < nums[i].length; i2++){
+        returnedString = returnedString + "<td>" + nums[i][i2] + "<td>";
+      }
       returnedString = returnedString + "</tr>";
     }
     returnedString = returnedString + "</table>";
