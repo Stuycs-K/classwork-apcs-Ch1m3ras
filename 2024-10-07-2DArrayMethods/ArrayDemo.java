@@ -47,6 +47,8 @@ public class ArrayDemo{
     System.out.println("\nTesting for htmlTable()");
     int[][] testArr9 = {{1,2},{3}};
     System.out.println(htmlTable(testArr9));
+
+    System.out.println("");
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
