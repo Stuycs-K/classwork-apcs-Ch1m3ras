@@ -5,9 +5,23 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+
+    //Testing methods added prior to the days work.
+    System.out.println("\nTesting for arrToString() against Arrays.toString()");
     int[] testArr1 = {1, 3, 4, 5, 6, 7, 2, 3, 4};
     System.out.println(Arrays.toString(testArr1));
     System.out.println(arrToString(testArr1));
+
+    System.out.println("\nTesting for arr2DSum()");
+    int[][] testArr2 = {{1, 2, 3}, {5, 6, 4}, {1, 2, 3}};
+    System.out.println(arr2DSum(testArr2));
+    System.out.println(1 + 2 + 3 + 5 + 6 + 4 + 1 + 2 + 3);
+
+    System.out.println("\nTesting for replaceNegative()");
+    int[][] testArr3 = {{-1, -2 , 3}, {4, 3}, {2, 1, 0}};
+    System.out.println(arrToString(testArr3));
+    replaceNegative(testArr3);
+    System.out.println(arrToString(testArr3));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
