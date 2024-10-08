@@ -163,6 +163,8 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String returnedString = "<table>";
+    returnedString = returnedString + "</table>"
+    return returnedString;
   }
 }
