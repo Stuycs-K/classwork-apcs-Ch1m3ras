@@ -36,7 +36,7 @@ public class ArrayDemo{
     //Test Cases for the functions unique to this assignment
     System.out.println("\nTesting for countZeros2D()");
     int[][] testArr5 = {{1, 2, 3, 4, 5}, {1, 0, 0, 3}, {0, 0, 4}};
-    int[][] testArr6 = {{}, {}};
+    int[][] testArr6 = {{1, 2}, {1}};
     int[][] testArr7 = {{0, 0, 0, 0, 0, 5}, {0, 1, 2, 3, 5}};
     int[][] testArr8 = new int[5][10];
     System.out.println(countZeros2D(testArr5));
@@ -47,6 +47,12 @@ public class ArrayDemo{
     System.out.println("\nTesting for htmlTable()");
     int[][] testArr9 = {{1,2},{3}};
     System.out.println(htmlTable(testArr9));
+    int[][] testArr10 = {};
+    System.out.println(htmlTable(testArr10));
+    int[][] testArr11 = {{4, 5, 7}, {10, 12, 3}, {19, 2}};
+    System.out.println(htmlTable(testArr11));
+    int[][] testArr12 = {{}, {}, {1, 2, 3}, {}};
+    System.out.println(htmlTable(testArr12));
 
     System.out.println("");
   }
