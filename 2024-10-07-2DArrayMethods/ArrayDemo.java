@@ -12,6 +12,11 @@ public class ArrayDemo{
     System.out.println(Arrays.toString(testArr1));
     System.out.println(arrToString(testArr1));
 
+    System.out.println("\nTesting for arrToString() for 2D arrays against Arrays.deepToString()");
+    int[][] testArr1_2D = {{5, 6, 7}, {4, 5, 3}, {1, 2, 4}};
+    System.out.println(Arrays.deepToString(testArr1_2D));
+    System.out.println(arrToString(testArr1_2D));
+
     System.out.println("\nTesting for arr2DSum()");
     int[][] testArr2 = {{1, 2, 3}, {5, 6, 4}, {1, 2, 3}};
     System.out.println(arr2DSum(testArr2));
