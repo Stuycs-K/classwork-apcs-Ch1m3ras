@@ -25,11 +25,17 @@ public class Demo{
     System.out.println("\nTest Cases for Distance Functions:");
     System.out.println("Demo's distance function");
     System.out.println(distance(p1,p2));
+    System.out.println(distance(p2, p3));
+    System.out.println(distance(p4, p3));
 
     System.out.println("Points' distance function:");
     System.out.println( Point.distance(p1,p2));
+    System.out.println( Point.distance(p2,p3));
+    System.out.println( Point.distance(p4,p3));
 
     System.out.println("Points' distanceTo function");
     System.out.println( p1.distanceTo(p2));
+    System.out.println( p2.distanceTo(p3));
+    System.out.println( p4.distanceTo(p3));
   }
 }
