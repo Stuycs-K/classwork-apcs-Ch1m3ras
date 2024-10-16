@@ -37,5 +37,11 @@ public class Demo{
     System.out.println( p1.distanceTo(p2));
     System.out.println( p2.distanceTo(p3));
     System.out.println( p4.distanceTo(p3));
+
+
+    //Triangle Points
+    Point triPoint1 = new Point(0, 0);
+    Point triPoint2 = new Point(Math.sqrt(3), 0);
+    Point triPoint3 = new Point((Math.sqrt(3) / 2), 0.5);
   }
 }
