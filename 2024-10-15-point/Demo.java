@@ -14,11 +14,22 @@ public class Demo{
     Point p3 = new Point(3,4);
     Point p4 = new Point(p1);
     Point p5 = new Point(p2);
-    System.out.println( p3);
+
+    //Test cases for the printing functions as well as the constructors
+    System.out.println("\nTest Cases for Constructors");
+    System.out.println(p3);
     System.out.println(p4);
     System.out.println(p5);
+
+    //Test Cases for the Distance Functions
+    System.out.println("\nTest Cases for Distance Functions:");
+    System.out.println("Demo's distance function");
     System.out.println(distance(p1,p2));
-    //System.out.println( Point.distance(p1,p2));
+
+    System.out.println("Points' distance function:");
+    System.out.println( Point.distance(p1,p2));
+
+    System.out.println("Points' distanceTo function");
     System.out.println( p1.distanceTo(p2));
   }
 }
