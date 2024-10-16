@@ -41,8 +41,8 @@ public class Demo{
 
     //Triangle Points
     Point triPoint1 = new Point(0, 0);
-    Point triPoint2 = new Point(Math.sqrt(3), 0);
-    Point triPoint3 = new Point((Math.sqrt(3) / 2), 0.5);
+    Point triPoint2 = new Point(Math.sqrt(3) / 2, 0.5);
+    Point triPoint3 = new Point(0, 1);
     System.out.println("\nTriangle Points Distance Difference:");
     System.out.println( triPoint1.distanceTo(triPoint2));
     System.out.println( triPoint2.distanceTo(triPoint3));
