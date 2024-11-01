@@ -13,6 +13,20 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       //CODE THAT SCANS THE FILE.
+
+      //Printing every other line of text:
+      int counter = 0;
+      while(input.hasNextLine()){
+        if(counter == 0){
+          counter++;
+          System.out.println(input.nextLine());
+        }
+        else if(counter == 1){
+          counter = 0;
+          input.nextLine();
+        }
+      }
+
       //input.close();//releases the file from your program
       System.out.println("Works");
 
@@ -20,19 +34,6 @@ public class ReadFile {
       //File not found what should you do?
       System.out.println("File not found");
       return; //you can return from a void function just don't put a value.
-    }
-
-    //Printing every other line of text:
-    int counter = 0;
-    //note to self: fix error where it won't compile later.
-    while(input.hasNextLine()){
-      if(counter == 0){
-        counter++;
-        System.out.println(input.nextLine());
-      }
-      else if(counter == 1){
-        counter = 0;
-      }
     }
   }
 }
