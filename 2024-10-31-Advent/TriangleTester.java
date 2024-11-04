@@ -24,13 +24,24 @@ public class TriangleTester{
           count++;
         }
       }
-    }
-
-    catch (FileNotFoundException e){
-      System.out.println("File was not found");
+    } catch (FileNotFoundException e){
+      System.out.println("File was not found.");
       return 0;
     }
     return count;
+  }
+
+  public static int countTrianglesB(String filename){
+    int count = 0;
+    try {
+      File file = new File(filename);
+      Scanner input = new Scanner(file);
+    } catch (FileNotFoundException e){
+      System.out.println("File was not found.");
+      return 0;
+    }
+    return count;
+
   }
 
   public static void main(String[] args){
