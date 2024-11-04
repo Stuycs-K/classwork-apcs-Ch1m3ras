@@ -28,11 +28,11 @@ public class ReadFile {
         }
       }
 
-      System.out.println("\nCode that checks if a line has an endbracket");
+      System.out.println("\nCode that checks if a line has an starting bracket");
       Scanner input2 = new Scanner(file);
       while(input2.hasNextLine()){
         String nextLine = input2.nextLine();
-        if(nextLine.indexOf("}") > -1){
+        if(nextLine.indexOf("{") > -1){
           System.out.println(nextLine);
         }
       }
