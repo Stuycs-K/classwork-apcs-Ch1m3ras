@@ -15,6 +15,7 @@ public class ReadFile {
       //CODE THAT SCANS THE FILE.
 
       //Printing every other line of text:
+      System.out.println("\nCode that checks to print every other line of text");
       int counter = 0;
       while(input.hasNextLine()){
         if(counter == 0){
@@ -24,6 +25,15 @@ public class ReadFile {
         else if(counter == 1){
           counter = 0;
           input.nextLine();
+        }
+      }
+
+      System.out.println("\nCode that checks if a line has an endbracket");
+      Scanner input2 = new Scanner(file);
+      while(input2.hasNextLine()){
+        String nextLine = input2.nextLine();
+        if(nextLine.indexOf("}") > -1){
+          System.out.println(nextLine);
         }
       }
 
