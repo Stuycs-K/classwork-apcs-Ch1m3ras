@@ -34,10 +34,19 @@ public class TriangleTester{
     try {
       File file = new File(filename);
       Scanner input = new Scanner(file);
-      // int[][] numStorage =
-      // while(intput.hasNextInt()){
-      //
-      // }
+      int[][] numStorage = new int[3][3];
+      while(input.hasNextInt() && input.hasNextLine()){
+        for(int i = 0; i < 3; i++){
+          for(int i2 = 0; i2 < 3; i2++){
+            numStorage[i2][i] = input.nextInt();
+          }
+        }
+        for(int i3 = 0; i3 < 3; i3++){
+          if(isTriangle(numStorage[i3])){
+            count++;
+          }
+        }
+      }
     } catch (FileNotFoundException e){
       System.out.println("File was not found.");
       return 0;
@@ -60,6 +69,7 @@ public class TriangleTester{
 
   public static void main(String[] args){
     System.out.println("Expected 2. Recieved: " + countTrianglesA("inputTri.txt"));
+    System.out.println("Expected 95. Recieved: " + countTrianglesB("inputTriB.txt"));
   }
 
 }
