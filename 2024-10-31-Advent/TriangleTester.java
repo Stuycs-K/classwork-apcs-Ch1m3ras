@@ -17,12 +17,10 @@ public class TriangleTester{
           pointStorage[i] = chosenPoint;
           // System.out.println(chosenPoint);
         }
-        int sumA = pointStorage[0] + pointStorage[1];
-        int sumB = pointStorage[1] + pointStorage[2];
-        int sumC = pointStorage[0] + pointStorage[2];
-        if(sumA > pointStorage[2] && sumB > pointStorage[0] && sumC > pointStorage[1]){
+        if(isTriangle(pointStorage)){
           count++;
         }
+
       }
     } catch (FileNotFoundException e){
       System.out.println("File was not found.");
@@ -36,12 +34,28 @@ public class TriangleTester{
     try {
       File file = new File(filename);
       Scanner input = new Scanner(file);
+      // int[][] numStorage =
+      // while(intput.hasNextInt()){
+      //
+      // }
     } catch (FileNotFoundException e){
       System.out.println("File was not found.");
       return 0;
     }
     return count;
 
+  }
+
+  public static boolean isTriangle(int[] triangleArray){
+    int sumA = triangleArray[0] + triangleArray[1];
+    int sumB = triangleArray[1] + triangleArray[2];
+    int sumC = triangleArray[0] + triangleArray[2];
+    if(sumA > triangleArray[2] && sumB > triangleArray[0] && sumC > triangleArray[1]){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
   public static void main(String[] args){
