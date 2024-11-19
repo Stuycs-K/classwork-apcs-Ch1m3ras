@@ -35,9 +35,13 @@ public class Taxicab{
       }
 
       facing = (facing + 4) % 4;
-      System.out.println(arrayOfValues[i] + " " + facing);
-    }
+      int amountMoved = Integer.parseInt(arrayOfValues[i].substring(1));
+      xMovement += amountMoved * arrayOfModifiers[facing][0];
+      yMovement += amountMoved * arrayOfModifiers[facing][1];
+      //System.out.println(arrayOfValues[i] + " x: " + xMovement + " y: " + yMovement);
 
+    }
+    System.out.println(xMovement + yMovement);
 
   }
 
