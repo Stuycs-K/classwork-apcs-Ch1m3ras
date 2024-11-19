@@ -1,4 +1,4 @@
-import java.io.File;
+`import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -9,26 +9,18 @@ public class Taxicab{
   //Sum the absolute value of north and east to get displacement.
   public static void main(String[] args){
     ArrayList<String> directions = new ArrayList<String>();
-    // ArrayList<Integer> distances = new ArrayList<Integer>();
     int distanceUp = 0;
     int distanceRight = 0;
     int direction = 0;
 
     try {
         File taxiInputs = new File("TaxicabInputs.txt");
-        // File taxiInputs2 = new File("TaxicabInputs.txt");
         Scanner inputDirection = new Scanner(taxiInputs);
-        // Scanner inputDistances = new Scanner(taxiInputs2);
         while(inputDirection.hasNext()){
           String stuffInputed = inputDirection.next();
           System.out.println(stuffInputed);
           directions.add(inputDirection.next());
         }
-        // while(inputDistances.hasNextInt()){
-        //   int stuffInputed = inputDistances.nextInt();
-        //   System.out.println(stuffInputed);
-        //   distances.add(stuffInputed);
-        // }
     }
     catch (FileNotFoundException e){
         System.out.println("File not found. Try again.");
@@ -36,28 +28,22 @@ public class Taxicab{
     }
 
     for(int i = 0; i < directions.size(); i++){
-      if(directions.get(i).substring(0,1).equals("L")){
+      String mainPart = directions.get(i);
+      String facing = mainPart.substring(0,1);
+      System.out.println(facing);
+      if(facing.equals("L")){
         direction = direction - 90;
-        System.out.println(direction);
       }
-      else if(directions.get(i).substring(0,1).equals("R")){
+      else if(facing.equals("R")){
         direction = direction + 90;
-        System.out.println(direction);
       }
 
-    //   if(direction % 360 == 0){
-    //     distanceUp += distances.get(i);
-    //   }
-    //   else if(direction % 270 == 0){
-    //     distanceRight -= distances.get(i);
-    //   }
-    //   else if(direction % 180 == 0){
-    //     distanceUp -= distances.get(i);
-    //   }
-    //   else{
-    //     distanceRight += distances.get(i);
-    //   }
+      String movement2 = mainPart.substring(1, mainPart.length() - 1);
+      int movement = Integer.parseInt(mainPart.substring(1, mainPart.length() - 1));
+      System.out.println(movement2);
     }
+
+
 
   }
 
