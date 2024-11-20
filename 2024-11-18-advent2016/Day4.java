@@ -8,8 +8,7 @@ public class Day4{
   public static void main(String[] args){
     ArrayList<String> roomList = new ArrayList<String>();
     char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    int placeholderIntForHighestValues = 999;
-    int[] indexOfHighestValues = {placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues};
+    int count = 0;
 
     try{
       File inputValues = new File("Day4.txt");
@@ -35,11 +34,13 @@ public class Day4{
         }
       }
 
-      System.out.println("\n\n\n");
-      for(int i6 = 0; i6 < amountAppeared.length; i6++){
-        System.out.println(amountAppeared[i6]);
-      }
+      // System.out.println("\n\n\n");
+      // for(int i6 = 0; i6 < amountAppeared.length; i6++){
+      //   System.out.println(amountAppeared[i6]);
+      // }
 
+      int placeholderIntForHighestValues = 999;
+      int[] indexOfHighestValues = {placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues, placeholderIntForHighestValues};
       for(int i4 = 0; i4 < indexOfHighestValues.length; i4++){
         int currentMax = 0;
         for(int i5 = 0; i5 < amountAppeared.length; i5++){
@@ -48,13 +49,17 @@ public class Day4{
             indexOfHighestValues[i4] = i5;
           }
         }
-        System.out.println(indexOfHighestValues[i4] + " " + alphabet[indexOfHighestValues[i4]]);
+        // System.out.println(indexOfHighestValues[i4] + " " + alphabet[indexOfHighestValues[i4]]);
         answer = answer + alphabet[indexOfHighestValues[i4]];
 
       }
-      System.out.println(answer);
+      // System.out.println(answer);
+      // System.out.println(roomList.get(i).substring(roomList.get(i).length() - 6, roomList.get(i).length() - 1));
+      if(answer.equals(roomList.get(i).substring(roomList.get(i).length() - 6, roomList.get(i).length() - 1))){
+        count = count + 1;
+      }
     }
-
+    System.out.println(count);
 
   }
 
