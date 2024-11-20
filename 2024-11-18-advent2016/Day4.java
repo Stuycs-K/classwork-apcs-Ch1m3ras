@@ -8,7 +8,7 @@ public class Day4{
   public static void main(String[] args){
     ArrayList<String> roomList = new ArrayList<String>();
     char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    int count = 0;
+    int total = 0;
 
     try{
       File inputValues = new File("Day4.txt");
@@ -55,11 +55,13 @@ public class Day4{
       }
       // System.out.println(answer);
       // System.out.println(roomList.get(i).substring(roomList.get(i).length() - 6, roomList.get(i).length() - 1));
+      int roomId = Integer.parseInt(roomList.get(i).substring(roomList.get(i).length() - 10, roomList.get(i).length() - 7));
+      System.out.println(roomId);
       if(answer.equals(roomList.get(i).substring(roomList.get(i).length() - 6, roomList.get(i).length() - 1))){
-        count = count + 1;
+        total += roomId;
       }
     }
-    System.out.println(count);
+    System.out.println(total);
 
   }
 
