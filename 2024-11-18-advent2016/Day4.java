@@ -32,11 +32,13 @@ public class Day4{
           }
         }
       }
-      for(int i4 = 0; i4 < amountAppeared.length; i4++){
-        System.out.println(amountAppeared[i4]);
-      }
-      System.out.println("\n\n");
+      // for(int i4 = 0; i4 < amountAppeared.length; i4++){
+      //   System.out.println(amountAppeared[i4]);
+      // }
+      // System.out.println("\n\n");
     }
+
+    
 
   }
 
