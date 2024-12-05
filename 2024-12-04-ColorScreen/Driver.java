@@ -5,6 +5,7 @@ public class Driver{
     int ySize = 30;
     System.out.println("\033[2J"); //Clears the screen
     border(80, 30);
+    int[] randomArray = makeThreeRandomInts();
     System.out.print("\033[0m"); //Resets everything to defaults
   }
 
@@ -31,6 +32,14 @@ public class Driver{
       Text.color(41 + (i % 8), 31 + (i % 8));
       System.out.print("l");
     }
+  }
+
+  public static int[] makeThreeRandomInts(){
+    int[] returnedArray = new int[3];
+    for(int i = 0; i < 3; i++){
+      returnedArray[i] = (int)(Math.random() * 100.0);
+    }
+    return returnedArray;
   }
 
 }
