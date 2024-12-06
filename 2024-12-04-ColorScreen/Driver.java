@@ -6,6 +6,7 @@ public class Driver{
     System.out.print("\033[2J"); //Clears the screen
     border(80, 30);
     intLine(makeThreeRandomInts());
+    divider(80, 5);
     Text.go(30, 81);
     System.out.print("\033[0m"); //Resets everything to defaults
   }
@@ -61,6 +62,14 @@ public class Driver{
     }
     else {
       Text.color(37);
+    }
+  }
+
+  public static void divider(int length, int height){
+    for(int i = 2; i < length; i++){
+      Text.go(height, i);
+      Text.color(37);
+      System.out.print("-");
     }
   }
 
