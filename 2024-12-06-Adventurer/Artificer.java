@@ -37,4 +37,28 @@ public class Artificer extends Adventurer{
     return specialMax;
   }
 
+  public String attack(Adventurer other){
+    int damageRoll = (int)((Math.random() * 4) + 1);
+    other.applyDamage(damageRoll);
+    return super.getName() + "\'s attack dealt " + damageRoll + "damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+  }
+
+  public String support(Adventurer other){
+    //Will find way to support later once more than health is added.
+    return null;
+  }
+
+  public String support(){
+    //Will find way to support later once more stats than health is added.
+    return null;
+  }
+
+  public String specialAttack(Adventurer other){
+    int damageRoll = (int)((Math.random() * 4) + 10);
+    other.applyDamage(damageRoll);
+    setSpecial(getSpecial() - 5);
+    return super.getName() + "\'s scrap cannon attack dealt" + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+  }
+
+
 }
