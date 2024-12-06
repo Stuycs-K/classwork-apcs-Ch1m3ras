@@ -3,9 +3,10 @@ public class Driver{
   public static void main(String[] args){
     int xSize = 80;
     int ySize = 30;
-    System.out.println("\033[2J"); //Clears the screen
+    System.out.print("\033[2J"); //Clears the screen
     border(80, 30);
-    int[] randomArray = makeThreeRandomInts();
+    intLine(makeThreeRandomInts());
+    Text.go(30, 81);
     System.out.print("\033[0m"); //Resets everything to defaults
   }
 
@@ -40,6 +41,27 @@ public class Driver{
       returnedArray[i] = (int)(Math.random() * 100.0);
     }
     return returnedArray;
+  }
+
+  public static void intLine(int[] randomInts){
+    for(int i = 0; i < 3; i++){
+      Text.go(2, (26 * i) + 12);
+      System.out.print("\033[0m");
+      colorAssigner(randomInts[i]);
+      System.out.print(randomInts[i]);
+    }
+  }
+
+  public static void colorAssigner(int randomizedInt){
+    if(randomizedInt < 25){
+      Text.color(1, 31);
+    }
+    else if(randomizedInt > 75){
+      Text.color(1, 32);
+    }
+    else {
+      Text.color(37);
+    }
   }
 
 }
