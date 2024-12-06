@@ -7,6 +7,7 @@ public class Driver{
     border(80, 30);
     intLine(makeThreeRandomInts());
     divider(80, 5);
+    smile(40, 10);
     Text.go(30, 81);
     System.out.print("\033[0m"); //Resets everything to defaults
   }
@@ -70,6 +71,23 @@ public class Driver{
       Text.go(height, i);
       Text.color(37);
       System.out.print("-");
+    }
+  }
+
+  public static void smile(int startingX, int startingY){
+    Text.go(startingY, startingX);
+    Text.color(37, 47);
+    System.out.print("H");
+    Text.go(startingY, startingX + 7);
+    System.out.println("H");
+    for(int i = 1; i <= 6; i++){
+      if(i == 1 || i == 6){
+        Text.go(startingY + 5, startingX + i);
+      }
+      else{
+        Text.go(startingY + 6, startingX + i);
+      }
+      System.out.println("H");
     }
   }
 
