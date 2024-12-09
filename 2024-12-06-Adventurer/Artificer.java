@@ -44,20 +44,25 @@ public class Artificer extends Adventurer{
   }
 
   public String support(Adventurer other){
-    //Will find way to support later once more than health is added.
-    return null;
+    other.restoreSpecial(5);
+    return super.getName() + "restored 5 special points to " + other.getName();
   }
 
   public String support(){
-    //Will find way to support later once more stats than health is added.
-    return null;
+    restoreSpecial(3);
+    return super.getName() + "scavenged up 3 scrap making his special total to: " + getSpecial();
   }
 
   public String specialAttack(Adventurer other){
-    int damageRoll = (int)((Math.random() * 4) + 10);
-    other.applyDamage(damageRoll);
-    setSpecial(getSpecial() - 5);
-    return super.getName() + "\'s scrap cannon attack dealt" + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+    if(getSpecial() > 5){
+      int damageRoll = (int)((Math.random() * 4) + 10);
+      other.applyDamage(damageRoll);
+      setSpecial(getSpecial() - 5);
+      return super.getName() + "\'s scrap cannon attack dealt" + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+    }
+    else{
+      return "Out of scrap. Instead, " + attack(other);
+    }
   }
 
 
