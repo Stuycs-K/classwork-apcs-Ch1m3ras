@@ -40,7 +40,7 @@ public class Artificer extends Adventurer{
   public String attack(Adventurer other){
     int damageRoll = (int)((Math.random() * 4) + 1);
     other.applyDamage(damageRoll);
-    return super.getName() + "\'s attack dealt " + damageRoll + "damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+    return super.getName() + "\'s attack dealt " + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
   }
 
   public String support(Adventurer other){
@@ -55,10 +55,10 @@ public class Artificer extends Adventurer{
 
   public String specialAttack(Adventurer other){
     if(getSpecial() > 5){
-      int damageRoll = (int)((Math.random() * 4) + 10);
+      int damageRoll = (int)((Math.random() * 4) + 5);
       other.applyDamage(damageRoll);
       setSpecial(getSpecial() - 5);
-      return super.getName() + "\'s scrap cannon attack dealt" + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
+      return super.getName() + "\'s scrap cannon attack dealt " + damageRoll + " damage to " + other.getName() + " leaving them with " + other.getHP() + " health left";
     }
     else{
       return "Out of scrap. Instead, " + attack(other);
