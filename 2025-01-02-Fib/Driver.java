@@ -10,7 +10,8 @@ public class Driver{
     // System.out.println(fib(5));
     // System.out.println(fib(6));
     // System.out.println(fib(7));
-    System.out.println(fib(47));
+    //System.out.println(fib(47));
+    makeWords(5, "", "fish");
   }
 
   public static int fib(int value){
@@ -22,6 +23,17 @@ public class Driver{
     }
     else{
       return fib(value - 1) + fib(value - 2);
+    }
+  }
+
+  public static void makeWords(int remainingLetters, String result, String alphabet){
+    if(remainingLetters == 0){
+      System.out.println(result);
+    }
+    else{
+      for(int i = 0; i < alphabet.length(); i++){
+        makeWords(remainingLetters - 1, result + alphabet.charAt(i), alphabet);
+      }
     }
   }
 
