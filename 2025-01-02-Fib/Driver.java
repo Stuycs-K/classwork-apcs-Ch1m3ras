@@ -11,7 +11,8 @@ public class Driver{
     // System.out.println(fib(6));
     // System.out.println(fib(7));
     //System.out.println(fib(47));
-    makeWords(5, "", "fish");
+    //makeWords(5, "", "fish");
+    System.out.println(toWords(11));
   }
 
   public static int fib(int value){
@@ -35,6 +36,14 @@ public class Driver{
         makeWords(remainingLetters - 1, result + alphabet.charAt(i), alphabet);
       }
     }
+  }
+
+  public static String toWords(int n){
+    if(n < 20){
+      String[] numbersLessThan20 = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+      return numbersLessThan20[n - 1];
+    }
+    return "";
   }
 
 }
